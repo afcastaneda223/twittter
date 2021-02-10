@@ -12,6 +12,7 @@
   </head>
 
   <body>
+
     <% if flash[:notice] %>
       <div class="notification is-primary global-notification">
         <p class="notice">
@@ -19,6 +20,7 @@
         </p>
       </div>
     <% end %>
+
     <% if flash[:alert] %>
       <div class="notification is-danger global-notification">
         <p class="alert">
@@ -26,14 +28,14 @@
         </p>
       </div>
     <% end %>
-    
     <nav class="navbar is-info">
       <div class="navbar-brand">
-        <%= link_to root_path, classs: "navbar-item" do %>
-          <h1 class="title is-2">Twittter</h1>
-        <% end %>
-        <div class="navbar-burger burger" data-target="navbarExample">
-          <span></span> 
+        <%= link_to root_path, class: "navbar-item" do %>
+          <h1 class="title is-3">Twittter</h1>
+        <% end  %>
+
+        <div class="navbar-burger burger" data-targer="navbarExample">
+          <span></span>
           <span></span>
           <span></span>
         </div>
@@ -43,12 +45,16 @@
         <div class="navbar-end">
           <div class="field is-grouped">
             <p class="control">
-            <%= link_to 'New Tweeet', new_tweeet_path, class: "button is-info is-inverted" %>
+              <%= link_to 'New Tweeet', new_tweeet_path, class:"button is-info is-inverted" %>
             </p>
+
+
+
           </div>
         </div>
       </div>
     </nav>
+    
     <%= yield %>
   </body>
 </html>
